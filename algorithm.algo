@@ -1,0 +1,27 @@
+VAR
+    sentence : STRING :="this is a sentence."
+    s : STRING : = ' '
+
+    i :INTEGER := 0
+    count : INTEGER := 0
+    wordNumber : INTEGER := 0
+BEGIN
+    READ(sentence)
+    FOR i FROM 0 TO (sentence.indexof('.') + 1) STEP i++  DO
+        count = count + 1
+        IF (sentence[i] == s) THEN
+            wordNumber = wordNumber + 1
+        END_IF
+        IF (sentence.charAt(i).match(/[aeiou]/)) THEN
+            vowels = vowels + 1
+        END_IF
+
+        
+    END_FOR
+    write(count)  // write (i)
+    write(wordNumber + 1)
+    write(vowels)
+
+
+END
+
